@@ -51,3 +51,9 @@ Returns: The results of a match of Rock Paper Scissors with the player against W
 -```[sides]```: The number of sides of the dice to be rolled
 
 Returns: A random number between 1 and ```[sides]``` inclusive
+<br><br>
+
+## Rickroll
+### Syntax: ```w?rickroll```
+
+Returns: A picture of a rickroll meme (see say_goodbye.jpg)
