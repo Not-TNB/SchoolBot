@@ -20,14 +20,14 @@ Returns: Latency of bot
 ## Search
 ### Syntax: ```w?search [query] [sentences]```
 - ```[query]```: Search term
-- ```[sentences]```: Number of sentences to show in result
+- ```[sentences]```: Number of sentences to show in result (Default: 2)
 
 Returns: Wikipedia page related to ```[query]```
 <br><br>
 
 ## Random
 ### Syntax: ```w?random [sentences]```
--```[sentences]```: Number of sentences to show in result
+-```[sentences]```: Number of sentences to show in result (Default: 2)
 
 Returns: Random Wikipedia page
 <br><br>
@@ -54,7 +54,7 @@ Returns: The results of a match of Rock Paper Scissors with the player against W
 
 ## Dice
 ### Syntax ```w?dice [sides]```
--```[sides]```: The number of sides of the dice to be rolled
+-```[sides]```: The number of sides of the dice to be rolled (Default: 6)
 
 Returns: A random number between 1 and ```[sides]``` inclusive
 <br><br>
