@@ -81,3 +81,9 @@ Returns: A picture of the "Reject Humanity, Return To Monke" meme (see [here](Wi
 ### Syntax: ```w?hiding_place```
 
 Returns: A diagram of the "Saddam's hiding place" meme (see [here](Wikipedia%20Searcher/hiding_place.png))
+<br><br>
+
+## Loss Lines
+### Syntax: ```w?loss```
+
+Returns: A picture of the Loss meme (see [here](Wikipedia%20Searcher/loss.jpg))
