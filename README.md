@@ -1,5 +1,5 @@
 # WikiSearch
-Learning how to make discord bots!
+My first discord bot! 
 <br><br>
 
 # Commands
