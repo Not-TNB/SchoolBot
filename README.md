@@ -57,3 +57,9 @@ Returns: A random number between 1 and ```[sides]``` inclusive
 ### Syntax: ```w?rickroll```
 
 Returns: A picture of a rickroll meme (see [here](Wikipedia%20Searcher/say_goodbye.jpg))
+<br><br>
+
+## Twerking Amogus
+### Syntax: ```w?sussy_baka```
+
+Returns: A gif of the twerking crewmate meme (see [here](Wikipedia%20Searcher/amogus.gif)
