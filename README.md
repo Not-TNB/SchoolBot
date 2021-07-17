@@ -8,7 +8,7 @@ My first discord bot!
 ## Help
 ### Syntax: ```w?help```
 
-Returns: Link to this repository ([here](https://github.com/Not-TNB/WikiSearch))
+Returns: [Link to this repository](https://github.com/Not-TNB/WikiSearch))
 
 ## Ping
 ### Syntax: ```w?ping```
