@@ -62,4 +62,16 @@ Returns: A picture of a rickroll meme (see [here](Wikipedia%20Searcher/say_goodb
 ## Twerking Amogus
 ### Syntax: ```w?sussy_baka```
 
-Returns: A gif of the twerking crewmate meme (see [here](Wikipedia%20Searcher/amogus.gif)
+Returns: A gif of the twerking crewmate meme (see [here](Wikipedia%20Searcher/amogus.gif))
+<br><br>
+
+## Return To Monke
+### Syntax: ```w?reject_humanity```
+
+Returns: A picture of the "Reject Humanity, Return To Monke" meme (see [here](Wikipedia%20Searcher/return_to_monke.jpg))
+<br><br>
+
+## Saddam Hussein Hiding Place
+### Syntax: ```w?hiding_place```
+
+Returns: A diagram of the "Saddam Hussein's hiding place" meme (see [here](Wikipedia%20Searcher/hiding_place.png))
