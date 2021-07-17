@@ -9,6 +9,7 @@ My first discord bot!
 ### Syntax: ```w?command_help```
 
 Returns: [Link to this repository](https://github.com/Not-TNB/WikiSearch)
+<br><br>
 
 ## Ping
 ### Syntax: ```w?ping```
