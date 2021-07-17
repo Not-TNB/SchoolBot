@@ -71,7 +71,7 @@ Returns: A gif of the twerking crewmate meme (see [here](Wikipedia%20Searcher/am
 Returns: A picture of the "Reject Humanity, Return To Monke" meme (see [here](Wikipedia%20Searcher/return_to_monke.jpg))
 <br><br>
 
-## Saddam Hussein Hiding Place
+## Saddam's Hiding Place
 ### Syntax: ```w?hiding_place```
 
-Returns: A diagram of the "Saddam Hussein's hiding place" meme (see [here](Wikipedia%20Searcher/hiding_place.png))
+Returns: A diagram of the "Saddam's hiding place" meme (see [here](Wikipedia%20Searcher/hiding_place.png))
