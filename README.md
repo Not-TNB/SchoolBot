@@ -29,3 +29,6 @@ Returns: Random Wikipedia page
 ## Setlang
 ### Syntax: ```w?setlang [language_prefix]```
 -```[language_prefix]```: Prefix of language of choice. See [List Of Wikipedias](https://en.wikipedia.org/wiki/List_of_Wikipedias)
+
+Returns: Changes the language of the results of ```w?search``` and ```w?random```
+<br><br>
