@@ -32,3 +32,8 @@ Returns: Random Wikipedia page
 
 Returns: Changes the language of the results of ```w?search``` and ```w?random```
 <br><br>
+
+## Donate
+### Syntax: ```w?donate```
+
+Returns: Sends the user to [Wikimedia's Donation Page](https://donate.wikimedia.org/w/index.php?title=Special:LandingPage)
