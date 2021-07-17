@@ -5,6 +5,11 @@ My first discord bot!
 # Commands
 ### Command Prefix: ```w?```<br><br>
 
+## Help
+### Syntax: ```w?help```
+
+Returns: Link to this repository ([here](https://github.com/Not-TNB/WikiSearch))
+
 ## Ping
 ### Syntax: ```w?ping```
 
