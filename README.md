@@ -56,4 +56,4 @@ Returns: A random number between 1 and ```[sides]``` inclusive
 ## Rickroll
 ### Syntax: ```w?rickroll```
 
-Returns: A picture of a rickroll meme (see [here](/blob/main/Wikipedia%20Searcher/say_goodbye.jpg))
+Returns: A picture of a rickroll meme (see [here](Wikipedia%20Searcher/say_goodbye.jpg))
