@@ -20,14 +20,14 @@ Returns: Latency of bot
 ## Search
 ### Syntax: ```w?search [query] [sentences]```
 - ```[query]```: Search term
-- ```[sentences]```: Number of sentences to show in result (Default: 2)
+- ```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
 
 Returns: Wikipedia page related to ```[query]```
 <br><br>
 
 ## Random
 ### Syntax: ```w?random [sentences]```
--```[sentences]```: Number of sentences to show in result (Default: 2)
+-```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
 
 Returns: Random Wikipedia page
 <br><br>
