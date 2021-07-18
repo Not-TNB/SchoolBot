@@ -6,7 +6,7 @@ My first discord bot!
 ### Command Prefix: ```w?```<br><br>
 
 ## Help
-### Syntax: ```w?command_help```
+### Syntax: ```w?help```
 
 Returns: [Link to this repository](https://github.com/Not-TNB/WikiSearch)
 <br><br>
