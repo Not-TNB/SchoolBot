@@ -18,8 +18,8 @@ Returns: Latency of bot
 <br><br>
 
 ## Search
-### Aliases: ```w?s```
 ### Syntax: ```w?search [query] [sentences]```
+### Aliases: ```w?s```
  ```[query]```: Search term<br>
  ```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
 
