@@ -66,7 +66,7 @@ async def random(ctx, sentences=2):
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
 
-@client.command(aliases = "lang") #Set Language
+@client.command(aliases = ["lang"]) #Set Language
 async def setlang(ctx, lang=""):
   embed = discord.Embed(title = "Set Language", color = 0x62f980)
   embed.set_footer(text="Wikipedia Searcher")
