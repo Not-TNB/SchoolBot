@@ -45,7 +45,7 @@ async def help(ctx):
 @client.command() #Ping (Latency)
 async def ping(ctx): await ctx.send(f"🏓Pong!\nLatency: {round(client.latency * 1000)}ms")
 
-@client.command(alises = ["s"]) #Search Article
+@client.command(aliases = ["s"]) #Search Article
 async def search(ctx, topic, sentences=2):
   embed = discord.Embed(title = "Results for: " + unsure(topic), color = 0x62f980)
   embed.set_footer(text="Wikipedia Searcher")
