@@ -19,9 +19,10 @@ Returns: Latency of bot
 
 ## Search
 ### Syntax: ```w?search [query] [sentences]```
-### Aliases: ```w?s```
  ```[query]```: Search term<br>
  ```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
+ 
+### Aliases: ```w?s```
 
 Returns: Wikipedia page related to ```[query]```
 <br><br>
