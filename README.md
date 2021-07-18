@@ -59,6 +59,13 @@ Returns: The results of a match of Rock Paper Scissors with the player against W
 Returns: A random number between 1 and ```[sides]``` inclusive
 <br><br>
 
+## Calculate
+### Syntax ```w?calc [calculation]```
+-```[calculation]```: The equation to be calculated. Supports basic arithmetic and PEMDAS/BODMAS calculations
+
+Returns: The evaluation of ```[calculation]```
+<br><br>
+
 ## Rickroll
 ### Syntax: ```w?rickroll```
 
