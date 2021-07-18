@@ -29,7 +29,7 @@ Returns: Wikipedia page related to ```[query]```
 
 ## Random
 ### Syntax: ```w?random [sentences]```
-```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
+```[sentences]```: Number of sentences to show in result (Leave as "_" to leave as default (2)) (Max amount is 10)
 
 ### Aliases: ```w?rand```
 
