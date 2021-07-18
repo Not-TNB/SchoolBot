@@ -63,6 +63,7 @@ Returns: A random number between 1 and ```[sides]``` inclusive
 ### Syntax ```w?calc [calculation]```
 ```[calculation]```: The equation to be calculated. Supports the following:
   - Basic Arithmetic (+, -, *, /)
+  - Decimal Values (8.6, 9.15, 0.2, etc.)
   - Parantheses ()
   - Exponentiation (** or ^)
 
