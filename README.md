@@ -19,7 +19,7 @@ Returns: Latency of bot
 
 ## Search
 ### Syntax: ```w?search [query] [sentences]```
- ```[query]```: Search term
+ ```[query]```: Search term<br>
  ```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
 
 Returns: Wikipedia page related to ```[query]```
@@ -27,14 +27,14 @@ Returns: Wikipedia page related to ```[query]```
 
 ## Random
 ### Syntax: ```w?random [sentences]```
--```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
+```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
 
 Returns: Random Wikipedia page
 <br><br>
 
 ## Setlang
 ### Syntax: ```w?setlang [language_prefix]```
--```[language_prefix]```: Prefix of language of choice. See [List Of Wikipedias](https://en.wikipedia.org/wiki/List_of_Wikipedias)
+```[language_prefix]```: Prefix of language of choice. See [List Of Wikipedias](https://en.wikipedia.org/wiki/List_of_Wikipedias)
 
 Returns: Changes the language of the results of ```w?search``` and ```w?random```
 <br><br>
@@ -47,21 +47,21 @@ Returns: Sends the user to [Wikimedia's Donation Page](https://donate.wikimedia.
 
 ## RPS (Rock Paper Scissors)
 ### Syntax: ```w?rps [move]```
--```[move]```: The player's move. Must be rock, paper or scissors
+```[move]```: The player's move. Must be rock, paper or scissors
 
 Returns: The results of a match of Rock Paper Scissors with the player against WikiSearch
 <br><br>
 
 ## Dice
 ### Syntax ```w?dice [sides]```
--```[sides]```: The number of sides of the dice to be rolled (Default: 6)
+```[sides]```: The number of sides of the dice to be rolled (Default: 6)
 
 Returns: A random number between 1 and ```[sides]``` inclusive
 <br><br>
 
 ## Calculate
 ### Syntax ```w?calc [calculation]```
--```[calculation]```: The equation to be calculated. Supports the following:
+```[calculation]```: The equation to be calculated. Supports the following:
   - Basic Arithmetic (+, -, *, /)
   - Parantheses ()
   - Exponentiation (** or ^)
