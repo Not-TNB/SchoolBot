@@ -28,23 +28,24 @@ Returns: Wikipedia page related to ```[query]```
 <br><br>
 
 ## Random
-### Aliases: ```w?rand```
 ### Syntax: ```w?random [sentences]```
 ```[sentences]```: Number of sentences to show in result (Default: 2) (Max amount is 10)
+
+### Aliases: ```w?rand```
 
 Returns: Random Wikipedia page
 <br><br>
 
 ## Setlang
-### Aliases: ```w?lang```
 ### Syntax: ```w?setlang [language_prefix]```
 ```[language_prefix]```: Prefix of language of choice. See [List Of Wikipedias](https://en.wikipedia.org/wiki/List_of_Wikipedias)
+
+### Aliases: ```w?lang```
 
 Returns: Changes the language of the results of ```w?search``` and ```w?random```
 <br><br>
 
 ## Donate
-### Aliases: None
 ### Syntax: ```w?donate```
 
 Returns: Sends the user to [Wikimedia's Donation Page](https://donate.wikimedia.org/w/index.php?title=Special:LandingPage)
