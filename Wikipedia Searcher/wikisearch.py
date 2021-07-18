@@ -5,11 +5,12 @@ import wikipedia
 import discord
 
 client = commands.Bot(command_prefix="w?")
+client.remove_command("help")
 
 def unsure(topic):
   try: p = wikipedia.page(topic)
   except wikipedia.DisambiguationError as error: topic = error.options[0]
-  return topic
+  return topic 
 
 def isint(s):
   try: 
@@ -29,30 +30,43 @@ async def on_message(msg):
   if msg.author == client.user: return
   await client.process_commands(msg)
 
+@client.command() #Help (Link to repo)
+async def help(ctx):
+  embed = discord.Embed(
+    title = "Help",
+    color = 0x62f980,
+    description = "Need help? Go to the repo! (https://github.com/Not-TNB/WikiSearch/blob/main/README.md)"
+  )
+  embed.set_footer(text="Wikipedia Searcher")
+  embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQPA8Qi7lg9kj1shVj4E4uhH6lblZKa03WOSf0Hqm_XCuQyrd3-wROXjx4qG6bol4kfA&usqp=CAU")
+  await ctx.send(embed = embed)
+  await ctx.message.add_reaction("👍")
+
 @client.command() #Ping (Latency)
 async def ping(ctx): await ctx.send(f"🏓Pong!\nLatency: {round(client.latency * 1000)}ms")
 
-@client.command() #Search Article
+@client.command(alises = ["s"]) #Search Article
 async def search(ctx, topic, sentences=2):
   embed = discord.Embed(title = "Results for: " + unsure(topic), color = 0x62f980)
   embed.set_footer(text="Wikipedia Searcher")
   embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQPA8Qi7lg9kj1shVj4E4uhH6lblZKa03WOSf0Hqm_XCuQyrd3-wROXjx4qG6bol4kfA&usqp=CAU")
-  if len(wikipedia.summary(unsure(topic), sentences=sentences)) >= 2000: embed.description = "Sorry, your request was too long, try shotening your sentence argument!"
+  if len(wikipedia.summary(unsure(topic), sentences=sentences)) >= 2000: embed.description = "Sorry, your sentences argument is too large or too little"
   else:  embed.description = wikipedia.summary(unsure(topic), sentences=sentences)
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
 
-@client.command() #Random Article
+@client.command(aliases = ["rand"]) #Random Article
 async def random(ctx, sentences=2):
   topic = unsure(wikipedia.random())
   embed = discord.Embed(title = "Random Article: \"" + topic + "\"", color = 0x62f980)
   embed.set_footer(text="Wikipedia Searcher")
   embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQPA8Qi7lg9kj1shVj4E4uhH6lblZKa03WOSf0Hqm_XCuQyrd3-wROXjx4qG6bol4kfA&usqp=CAU")
-  embed.description = wikipedia.summary(topic, sentences=sentences)
+  if len(wikipedia.summary(unsure(topic), sentences=sentences)) >= 2000: embed.description = "Sorry, your sentences argument is too large or too little"
+  else: embed.description = wikipedia.summary(topic, sentences=sentences)
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
 
-@client.command() #Set Language
+@client.command(aliases = "lang") #Set Language
 async def setlang(ctx, lang=""):
   embed = discord.Embed(title = "Set Language", color = 0x62f980)
   embed.set_footer(text="Wikipedia Searcher")
@@ -106,21 +120,40 @@ async def dice(ctx, sides="6"):
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
 
+@client.command()
+async def calc(ctx, calculation=""):
+  embed = discord.Embed(title = "Calculator", color = 0x62f980)
+  embed.set_footer(text="Wikipedia Searcher")
+  embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQPA8Qi7lg9kj1shVj4E4uhH6lblZKa03WOSf0Hqm_XCuQyrd3-wROXjx4qG6bol4kfA&usqp=CAU")
+  chars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "+", "-", "*", "/", "%", "(", ")"]
+  calculation = calculation.replace("^", "**").replace("sqrt", "math.sqrt")
+  if all(c in chars for c in calculation):
+    try: eval(calculation)
+    except OverflowError: embed.description = "One of your calculations was too big to handle!"
+    except ZeroDivisionError: embed.description = "You cant divide or modulo a number by 0!"
+    except: embed.description = "Something went wrong..."
+    else: embed.description = str(eval(calculation))
+  await ctx.send(embed = embed)
+
 #EASTER EGGS
 @client.command() #Rickroll
 async def rickroll(ctx): 
-  await ctx.send(file=discord.File(r"Wikipedia Searcher\say_goodbye.jpg"))
+  await ctx.send(file = discord.File(r"\Wikipedia Searcher\say_goodbye.jpg"))
   await ctx.message.add_reaction("👍")
 @client.command() #Twerking Amogus
 async def sussy_baka(ctx): 
-  await ctx.send(file=discord.File(r"Wikipedia Searcher\amogus.gif"))
+  await ctx.send(file = discord.File(r"Wikipedia Searcher\amogus.gif"))
   await ctx.message.add_reaction("👍")
 @client.command() #Return to Monke
 async def reject_humanity(ctx): 
-  await ctx.send(file=discord.File(r"Wikipedia Searcher\return_to_monke.jpg"))
+  await ctx.send(file = discord.File(r"Wikipedia Searcher\return_to_monke.jpg"))
   await ctx.message.add_reaction("👍")
 @client.command() #Saddam Hussein Hiding Place
 async def hiding_place(ctx): 
-  await ctx.send(file=discord.File(r"Wikipedia Searcher\hiding_place.png"))
+  await ctx.send(file = discord.File(r"Wikipedia Searcher\hiding_place.png"))
   await ctx.message.add_reaction("👍")
+@client.command() #Loss Lines
+async def loss(ctx):
+  await ctx.send(file = discord.File(r"Wikipedia Searcher\loss.jpg"))
+  
 client.run(config("WIKI_SEARCH_TOKEN"))
