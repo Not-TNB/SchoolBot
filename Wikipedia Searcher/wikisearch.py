@@ -46,7 +46,7 @@ async def help(ctx):
 async def ping(ctx): await ctx.send(f"🏓Pong!\nLatency: {round(client.latency * 1000)}ms")
 
 @client.command(aliases = ["s"]) #Search Article
-async def search(ctx, topic, sentences=2):
+async def search(ctx, sentences=2, *topic):
   embed = discord.Embed(title = "Results for: " + unsure(topic), color = 0x62f980)
   embed.set_footer(text="Wikipedia Searcher")
   embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQPA8Qi7lg9kj1shVj4E4uhH6lblZKa03WOSf0Hqm_XCuQyrd3-wROXjx4qG6bol4kfA&usqp=CAU")
