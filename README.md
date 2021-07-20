@@ -95,6 +95,15 @@ Returns: A translated version of ```[text]```
 Returns: The prefix of the language which ```[text]``` is most likely written in
 <br><br>
 
+## Find Element
+### Syntax: ```s?findelement [element]```
+```[element]```: Name of chemical element (Hydrogen, Lithium, Sodium, etc.)
+
+### Aliases: ```s?fe```
+
+Returns: The symbol, atomic number and atomic mass of ```[element]```
+<br><br>
+
 ## Rickroll
 ### Syntax: ```s?rickroll```
 
