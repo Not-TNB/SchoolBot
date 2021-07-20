@@ -59,14 +59,14 @@ Returns: The results of a match of Rock Paper Scissors with the player against W
 <br><br>
 
 ## Dice
-### Syntax ```s?dice [sides]```
+### Syntax: ```s?dice [sides]```
 ```[sides]```: The number of sides of the dice to be rolled (Default: 6)
 
 Returns: A random number between 1 and ```[sides]``` inclusive
 <br><br>
 
 ## Calculate
-### Syntax ```s?calc [calculation]```
+### Syntax: ```s?calc [calculation]```
 ```[calculation]```: The equation to be calculated. Supports the following:
   - Basic Arithmetic (+, -, *, /)
   - Decimal Values (8.6, 9.15, 0.2, etc.)
@@ -74,6 +74,16 @@ Returns: A random number between 1 and ```[sides]``` inclusive
   - Exponentiation (** or ^)
 
 Returns: The evaluation of ```[calculation]```
+<br><br>
+
+## Translate
+### Syntax: ```s?translate [dest] [text]```
+```[dest]```: Prefix of language to translate to (see list of valid prefixes [here](https://developers.google.com/admin-sdk/directory/v1/languages))
+```[text]```: Text to translate 
+
+### Aliases: ```s?t```
+
+Returns: A translated version of ```[text]```
 <br><br>
 
 ## Rickroll
