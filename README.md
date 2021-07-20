@@ -1,14 +1,14 @@
-# WikiSearch
+# School Bot
 My first discord bot! 
 <br><br>
 
 # Commands
-### Command Prefix: ```w?```<br><br>
+### Command Prefix: ```s?```<br><br>
 
 ## Help
 ### Syntax: ```w?help```
 
-Returns: [Link to this repository](https://github.com/Not-TNB/WikiSearch)
+Returns: [Link to this repository](https://github.com/Not-TNB/SchoolBot)
 <br><br>
 
 ## Ping
