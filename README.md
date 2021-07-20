@@ -78,7 +78,7 @@ Returns: The evaluation of ```[calculation]```
 
 ## Translate
 ### Syntax: ```s?translate [dest] [text]```
-```[dest]```: Prefix of language to translate to (see list of valid prefixes [here](https://developers.google.com/admin-sdk/directory/v1/languages))
+```[dest]```: Prefix of language to translate to (see list of valid prefixes [here](https://developers.google.com/admin-sdk/directory/v1/languages))<br>
 ```[text]```: Text to translate 
 
 ### Aliases: ```s?t```
