@@ -161,6 +161,19 @@ async def detectlang(ctx, *, text):
   embed.description = f"Detected Language Prefix: {prefix}" 
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
+  
+@client.command(aliases = ["fe"])
+async def findelement(ctx, element=""):
+  embed = discord.Embed(title = f"Chemical Element: {element.upper()}", color = 0x62f980)
+  embed.set_footer(text="School Bot")
+  embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_jPh7yl4NmiYaaKdm88hNv6Q-10TG7DGg06-IXJfMzARQgYlgJTsw_-_83YeLZQXucW4&usqp=CAU")
+  if element not in periodic.names: embed.description = "Sorry, your element name is invalid"
+  else:
+    number = periodic.atomic_number(element)-1
+    symbol = periodic.symbols[number]
+    mass = periodic.relative_atomic_masses[number]
+    embed.description = f"Symbol: {symbol}\nAtomic Number: {number+1}\nAtomic Mass: {mass}"
+  await ctx.send(embed = embed)
 
 #EASTER EGGS
 @client.command() #Rickroll
