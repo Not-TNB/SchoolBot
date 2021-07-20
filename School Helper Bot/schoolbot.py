@@ -12,15 +12,15 @@ translator = Translator()
 client = commands.Bot(command_prefix="s?")
 client.remove_command("help")
 
-async def unsure(topic):
+def unsure(topic):
   try: p = wikipedia.page(topic)
   except wikipedia.DisambiguationError as error: topic = error.options[0]
-  return await topic 
+  return topic 
 
-async def isint(s):
+def isint(s):
   try: 
-    int(s); return await True
-  except ValueError: return await False
+    int(s); return True
+  except ValueError: return False
 
 @client.event
 async def on_ready(): 
@@ -143,13 +143,25 @@ async def calc(ctx, calculation=""):
   await ctx.send(embed = embed)
 
 @client.command(aliases = ["t"])
-async def translate(ctx, src="auto", dest="en", *, text):
+async def translate(ctx, dest="en", *, text):
   embed = discord.Embed(title = "Translator", color = 0x62f980)
   embed.set_footer(text="School Bot")
   embed.set_thumbnail(url="https://www.jumpfly.com/wp-content/uploads/2019/09/google-translate-app-icon.jpg")
   if dest not in googletrans.LANGUAGES.keys(): embed.description = "Sorry! Your language prefix doesnt seem to be right (see https://developers.google.com/admin-sdk/directory/v1/languages)"  
   else: embed.description = f"Original Text: \n{text}\n\nTranslated Text: \n{(translator.translate(text, dest=dest)).text}"
   await ctx.send(embed = embed)
+  await ctx.message.add_reaction("👍")
+
+@client.command(aliases = ["dl"])
+async def detectlang(ctx, *, text):
+  embed = discord.Embed(title = "Translator", color = 0x62f980)
+  embed.set_footer(text="School Bot")
+  embed.set_thumbnail(url="https://www.jumpfly.com/wp-content/uploads/2019/09/google-translate-app-icon.jpg")
+  prefix = translator.detect(text).lang[0]
+  reversed = {str(v): k for k, v in googletrans.LANGUAGES.items()}
+  embed.description = f"Detected Language Prefix: {prefix}" 
+  await ctx.send(embed = embed)
+  await ctx.message.add_reaction("👍")
 
 #EASTER EGGS
 @client.command() #Rickroll
