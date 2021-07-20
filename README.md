@@ -18,35 +18,35 @@ Returns: Latency of bot
 <br><br>
 
 ## Search
-### Syntax: ```w?search [sentences] [query]```
+### Syntax: ```s?wsearch [sentences] [query]```
  ```[sentences]```: Number of sentences to show in result (Leave as "_" to leave as default (2)) (Max amount is 10)<br>
  ```[query]```: Search term (Default: Wikipeia)
  
-### Aliases: ```s?s```
+### Aliases: ```s?ws```
 
 Returns: Wikipedia page related to ```[query]```
 <br><br>
 
 ## Random
-### Syntax: ```s?random [sentences]```
+### Syntax: ```s?wrandom [sentences]```
 ```[sentences]```: Number of sentences to show in result (Leave as "_" to leave as default (2)) (Max amount is 10)
 
-### Aliases: ```s?rand```
+### Aliases: ```s?wrand```
 
 Returns: Random Wikipedia page
 <br><br>
 
 ## Setlang
-### Syntax: ```s?setlang [language_prefix]```
+### Syntax: ```s?wsetlang [language_prefix]```
 ```[language_prefix]```: Prefix of language of choice. See [List Of Wikipedias](https://en.wikipedia.org/wiki/List_of_Wikipedias)
 
-### Aliases: ```w?lang```
+### Aliases: ```s?wlang```
 
 Returns: Changes the language of the results of ```w?search``` and ```w?random```
 <br><br>
 
 ## Donate
-### Syntax: ```s?donate```
+### Syntax: ```s?wdonate```
 
 Returns: Sends the user to [Wikimedia's Donation Page](https://donate.wikimedia.org/w/index.php?title=Special:LandingPage)
 <br><br>
