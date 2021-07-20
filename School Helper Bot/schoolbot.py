@@ -158,7 +158,6 @@ async def detectlang(ctx, *, text):
   embed.set_footer(text="School Bot")
   embed.set_thumbnail(url="https://www.jumpfly.com/wp-content/uploads/2019/09/google-translate-app-icon.jpg")
   prefix = translator.detect(text).lang[0]
-  reversed = {str(v): k for k, v in googletrans.LANGUAGES.items()}
   embed.description = f"Detected Language Prefix: {prefix}" 
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
