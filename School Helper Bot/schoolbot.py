@@ -26,7 +26,7 @@ def isint(s):
 async def on_ready(): 
   await client.change_presence(
     status = discord.Status.online,
-    activity = discord.Activity(type=discord.ActivityType.watching, name="Paint Dry")
+    activity = discord.Activity(type=discord.ActivityType.watching, name="The Kids In My Basemend")
   )
   print("We have logged in as {0.user}".format(client))
 
