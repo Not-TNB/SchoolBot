@@ -6,7 +6,7 @@ My first discord bot!
 ### Command Prefix: ```s?```<br><br>
 
 ## Help
-### Syntax: ```w?help```
+### Syntax: ```s?help```
 
 Returns: [Link to this repository](https://github.com/Not-TNB/SchoolBot)
 <br><br>
