@@ -86,6 +86,15 @@ Returns: The evaluation of ```[calculation]```
 Returns: A translated version of ```[text]```
 <br><br>
 
+## Detect Language
+### Syntax: ```s?detectlang [text]```
+```[text]```: Text to find language of
+
+### Aliases: ```s?dl```
+
+Returns: The prefix of the language which ```[text]``` is most likely written in
+<br><br>
+
 ## Rickroll
 ### Syntax: ```s?rickroll```
 
