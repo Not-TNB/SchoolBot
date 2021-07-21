@@ -1,10 +1,10 @@
+from discord.ext import commands, tasks
 from googletrans import Translator
-from discord.ext import commands
+from chempy.util import periodic
 from decouple import config
 import random as r
 import googletrans
 import wikipedia
-import asyncio
 import discord
 
 translator = Translator()
@@ -25,7 +25,7 @@ def isint(s):
 async def on_ready(): 
   await client.change_presence(
     status = discord.Status.online,
-    activity = discord.Activity(type=discord.ActivityType.watching, name="The Kids In My Basemend")
+    activity = discord.Activity(type=discord.ActivityType.watching, name="The Kids In My Basement")
   )
   print("We have logged in as {0.user}".format(client))
 
@@ -142,7 +142,7 @@ async def calc(ctx, calculation=""):
   await ctx.send(embed = embed)
 
 @client.command(aliases = ["t"])
-async def translate(ctx, dest="en", *, text):
+async def translate(ctx, dest="en", *, text=""):
   embed = discord.Embed(title = "Translator", color = 0x62f980)
   embed.set_footer(text="School Bot")
   embed.set_thumbnail(url="https://www.jumpfly.com/wp-content/uploads/2019/09/google-translate-app-icon.jpg")
@@ -152,7 +152,7 @@ async def translate(ctx, dest="en", *, text):
   await ctx.message.add_reaction("👍")
 
 @client.command(aliases = ["dl"])
-async def detectlang(ctx, *, text):
+async def detectlang(ctx, *, text=""):
   embed = discord.Embed(title = "Translator", color = 0x62f980)
   embed.set_footer(text="School Bot")
   embed.set_thumbnail(url="https://www.jumpfly.com/wp-content/uploads/2019/09/google-translate-app-icon.jpg")
@@ -160,7 +160,7 @@ async def detectlang(ctx, *, text):
   embed.description = f"Detected Language Prefix: {prefix}" 
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
-  
+
 @client.command(aliases = ["fe"])
 async def findelement(ctx, element=""):
   embed = discord.Embed(title = f"Chemical Element: {element.upper()}", color = 0x62f980)
@@ -179,12 +179,12 @@ async def findelement(ctx, element=""):
 async def periodictable(ctx):
   await ctx.send(file = discord.File(r"School Helper Bot\periodic_table.jpg"))
   await ctx.message.add_reaction("👍")
-  
+
 @client.command(aliases = ["tt"])
 async def timetable(ctx, a):
   if a.lower() == "woolf": await ctx.send(file = discord.File(r"School Helper Bot\Woolf.png"))
-  elif a.lower() == "turner": await ctx.send(file = discord.File(r"School Helper Bot\Woolf.png"))
-  else: ctx.send(f"Couldnt find a class called: {a}")
+  elif a.lower() == "turner": await ctx.send(file = discord.File(r"School Helper Bot\Turner.png"))
+  else: await ctx.send(f"Couldnt find a class called: {a}")
   await ctx.message.add_reaction("👍")
 
 #EASTER EGGS
