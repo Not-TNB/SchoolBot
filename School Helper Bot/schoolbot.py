@@ -180,6 +180,13 @@ async def findelement(ctx, element=""):
 async def periodictable(ctx):
   await ctx.send(file = discord.File(r"School Helper Bot\periodic_table.jpg"))
   await ctx.message.add_reaction("👍")
+  
+@client.command(aliases = ["tt"])
+async def timetable(ctx, a):
+  if a.lower() == "woolf": await ctx.send(file = discord.File(r"School Helper Bot\Woolf.png"))
+  elif a.lower() == "turner": await ctx.send(file = discord.File(r"School Helper Bot\Woolf.png"))
+  else: ctx.send(f"Couldnt find a class called: {a}")
+  await ctx.message.add_reaction("👍")
 
 #EASTER EGGS
 @client.command() #Rickroll
