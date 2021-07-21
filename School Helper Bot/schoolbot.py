@@ -43,7 +43,7 @@ async def help(ctx):
     description = "Need help? Go to the repo! (https://github.com/Not-TNB/SchoolBot/blob/main/README.md)"
   )
   embed.set_footer(text="School Bot")
-  embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQPA8Qi7lg9kj1shVj4E4uhH6lblZKa03WOSf0Hqm_XCuQyrd3-wROXjx4qG6bol4kfA&usqp=CAU")
+  embed.set_thumbnail(url="https://miro.medium.com/max/719/0*9f5uMrKMjLbzEf7q.png")
   await ctx.send(embed = embed)
   await ctx.message.add_reaction("👍")
 
