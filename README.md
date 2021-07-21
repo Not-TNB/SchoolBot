@@ -104,6 +104,14 @@ Returns: The prefix of the language which ```[text]``` is most likely written in
 Returns: The symbol, atomic number and atomic mass of ```[element]```
 <br><br>
 
+## Periodic Table
+### Syntax: ```s?periodictable```
+
+### Aliases: ```s?pe```
+
+Returns: A picture of the periodic table
+<br><br>
+
 ## Rickroll
 ### Syntax: ```s?rickroll```
 
