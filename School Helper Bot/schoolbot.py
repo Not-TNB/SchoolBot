@@ -178,29 +178,29 @@ async def findelement(ctx, element=""):
 
 @client.command(aliases = ["pe"])
 async def periodictable(ctx):
-  await ctx.send(file = discord.File(r"\Wikipedia Searcher\periodic_table.jpg"))
+  await ctx.send(file = discord.File(r"School Helper Bot\periodic_table.jpg"))
   await ctx.message.add_reaction("👍")
 
 #EASTER EGGS
 @client.command() #Rickroll
 async def rickroll(ctx): 
-  await ctx.send(file = discord.File(r"\Wikipedia Searcher\say_goodbye.jpg"))
+  await ctx.send(file = discord.File(r"\School Helper Bot\say_goodbye.jpg"))
   await ctx.message.add_reaction("👍")
 @client.command() #Twerking Amogus
 async def sussy_baka(ctx): 
-  await ctx.send(file = discord.File(r"Wikipedia Searcher\amogus.gif"))
+  await ctx.send(file = discord.File(r"School Helper Bot\amogus.gif"))
   await ctx.message.add_reaction("👍")
 @client.command() #Return to Monke
 async def reject_humanity(ctx): 
-  await ctx.send(file = discord.File(r"Wikipedia Searcher\return_to_monke.jpg"))
+  await ctx.send(file = discord.File(r"School Helper Bot\return_to_monke.jpg"))
   await ctx.message.add_reaction("👍")
 @client.command() #Saddam Hussein Hiding Place
 async def hiding_place(ctx): 
-  await ctx.send(file = discord.File(r"Wikipedia Searcher\hiding_place.png"))
+  await ctx.send(file = discord.File(r"School Helper Bot\hiding_place.png"))
   await ctx.message.add_reaction("👍")
 @client.command() #Loss Lines
 async def loss(ctx):
-  await ctx.send(file = discord.File(r"Wikipedia Searcher\loss.jpg"))
+  await ctx.send(file = discord.File(r"School Helper Bot\loss.jpg"))
   await ctx.message.add_reaction("👍")
 
 client.run(config("SCHOOL_BOT_TOKEN"))
