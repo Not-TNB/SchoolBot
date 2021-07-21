@@ -174,6 +174,12 @@ async def findelement(ctx, element=""):
     mass = periodic.relative_atomic_masses[number]
     embed.description = f"Symbol: {symbol}\nAtomic Number: {number+1}\nAtomic Mass: {mass}"
   await ctx.send(embed = embed)
+  await ctx.message.add_reaction("👍")
+
+@client.command(aliases = ["pe"])
+async def periodictable(ctx):
+  await ctx.send(file = discord.File(r"\Wikipedia Searcher\periodic_table.jpg"))
+  await ctx.message.add_reaction("👍")
 
 #EASTER EGGS
 @client.command() #Rickroll
