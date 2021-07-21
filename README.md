@@ -112,6 +112,13 @@ Returns: The symbol, atomic number and atomic mass of ```[element]```
 Returns: A picture of the periodic table
 <br><br>
 
+## Time Table
+### Syntax: ```s?timetable [class]```
+```[class]```: The class you want to see the timetable of (Woolf / Turner)
+
+Returns: A picture of the timetable of ```[class]```
+<br><br>
+
 ## Rickroll
 ### Syntax: ```s?rickroll```
 
