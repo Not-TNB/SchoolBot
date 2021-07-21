@@ -6,7 +6,6 @@ import googletrans
 import wikipedia
 import asyncio
 import discord
-import os
 
 translator = Translator()
 client = commands.Bot(command_prefix="s?")
