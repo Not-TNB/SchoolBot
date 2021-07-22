@@ -186,6 +186,31 @@ async def timetable(ctx, a):
   elif a.lower() == "turner": await ctx.send(file = discord.File(r"School Helper Bot\Turner.png"))
   else: await ctx.send(f"Couldnt find a class called: {a}")
   await ctx.message.add_reaction("👍")
+  
+@client.command()
+async def isprime(ctx, number):
+  embed = discord.Embed(title = "Calculator", color = 0x62f980)
+  embed.set_footer(text="School Bot")
+  embed.set_thumbnail(url="https://lh3.googleusercontent.com/proxy/0W1ZJpD9Q4x8Lre9qNE1LHGhF_qqYnh6bDZHc837yQ5dz7B8OdhLzsO3oO9QbY_LZMlE7xu1Mbtv8phrFfaSJIbzKLmU3N-y87RssuP8sf3oK_fFlLv57KNqMw7xSkZt")
+  if not all(x in [str(i) for i in range(0, 10)] for x in number): embed.description = "Sorry, your input was invalid"
+  else: 
+    if sympy.isprime(int(number)): result = "is prime"
+    else: result = "is not prime"
+    embed.description = f"{number} {result}"
+  await ctx.send(embed = embed)
+
+@client.command(aliases = ["pf"])
+async def primefactorize(ctx, number):
+  embed = discord.Embed(title = "Calculator", color = 0x62f980)
+  embed.set_footer(text="School Bot")
+  embed.set_thumbnail(url="https://lh3.googleusercontent.com/proxy/0W1ZJpD9Q4x8Lre9qNE1LHGhF_qqYnh6bDZHc837yQ5dz7B8OdhLzsO3oO9QbY_LZMlE7xu1Mbtv8phrFfaSJIbzKLmU3N-y87RssuP8sf3oK_fFlLv57KNqMw7xSkZt")
+  if not all(x in [str(i) for i in range(0, 10)] for x in number): embed.description = "Sorry, your input was invalid"
+  else:
+    factorized = sympy.factorint(int(number))
+    result = ""
+    for k, v in factorized.items(): result += str(k) + "^" + str(v) + " * "
+    embed.description = f"Prime factorization of {number}:\n{result}"
+  await ctx.send(embed = embed)
 
 #EASTER EGGS
 @client.command() #Rickroll
