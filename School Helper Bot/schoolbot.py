@@ -48,7 +48,9 @@ async def help(ctx):
   await ctx.message.add_reaction("👍")
 
 @client.command() #Ping (Latency)
-async def ping(ctx): await ctx.send(f"🏓Pong!\nLatency: {round(client.latency * 1000)}ms")
+async def ping(ctx):
+  await ctx.send(f"🏓Pong!\nLatency: {round(client.latency * 1000)}ms")
+  await ctx.message.add_reaction("👍")
 
 @client.command(aliases = ["ws"]) #Search Article
 async def wsearch(ctx, sentences="_", *, topic="Wikipedia"):
