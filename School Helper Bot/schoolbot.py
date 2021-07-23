@@ -6,6 +6,7 @@ import random as r
 import googletrans
 import wikipedia
 import discord
+import sympy
 
 translator = Translator()
 client = commands.Bot(command_prefix="s?")
