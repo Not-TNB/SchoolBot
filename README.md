@@ -119,6 +119,22 @@ Returns: A picture of the periodic table
 Returns: A picture of the timetable of ```[class]```
 <br><br>
 
+## Is Prime
+### Syntax: ```s?isprime [number]```
+```[number]```: An integer
+
+Returns: Whether ```[number]``` is a prime number or not
+<br><br>
+
+## Prime Factorize
+### Syntax: ```s?primefactorize [number]```
+```[number]```: An integer
+
+### Aliases: ```s?pf```
+
+Returns: The prime factorization of ```[number]```
+<br><br>
+
 ## Rickroll
 ### Syntax: ```s?rickroll```
 
