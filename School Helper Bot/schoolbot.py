@@ -209,8 +209,8 @@ async def primefactorize(ctx, number):
   else:
     factorized = sympy.factorint(int(number))
     result = ""
-    for k, v in factorized.items(): result += str(k) + "^" + str(v) + " * "
-    embed.description = f"Prime factorization of {number}:\n{result}"
+    for k, v in factorized.items(): result += str(k) + "^" + str(v) + " , "
+    embed.description = f"Prime factorization of {number}:\n{result[:-3]}"
   await ctx.send(embed = embed)
 
 #EASTER EGGS
