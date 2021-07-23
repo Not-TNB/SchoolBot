@@ -116,6 +116,8 @@ Returns: A picture of the periodic table
 ### Syntax: ```s?timetable [class]```
 ```[class]```: The class you want to see the timetable of (Woolf / Turner)
 
+### Aliases: ```s?tt```
+
 Returns: A picture of the timetable of ```[class]```
 <br><br>
 
