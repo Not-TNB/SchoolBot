@@ -137,6 +137,13 @@ Returns: Whether ```[number]``` is a prime number or not
 Returns: The prime factorization of ```[number]```
 <br><br>
 
+## Divisors
+### Syntax: ```w?divisors [number]```
+```[number]```: An integer
+
+Returns: All the proper divisors of ```[number]```
+<br><br>
+
 ## Rickroll
 ### Syntax: ```s?rickroll```
 
