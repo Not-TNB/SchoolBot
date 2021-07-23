@@ -172,3 +172,9 @@ Returns: A diagram of the "Saddam's hiding place" meme (see [here](School%20Help
 ### Syntax: ```s?loss```
 
 Returns: A picture of the Loss meme (see [here](School%20Helper%20Bot/loss.jpg))
+<br><br>
+
+## Crying
+### SyntaxL ```s?cry```
+
+Returns: A picture of a man crying (see [here](School%20Helper%20Bot/cry.jpg))
