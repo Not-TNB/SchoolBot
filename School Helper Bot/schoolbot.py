@@ -212,6 +212,19 @@ async def primefactorize(ctx, number):
     for k, v in factorized.items(): result += str(k) + "^" + str(v) + " , "
     embed.description = f"Prime factorization of {number}:\n{result[:-3]}"
   await ctx.send(embed = embed)
+  
+@client.command()
+async def divisors(ctx, number):
+  embed = discord.Embed(title = "Calculator", color = 0x62f980)
+  embed.set_footer(text="School Bot")
+  embed.set_thumbnail(url="https://lh3.googleusercontent.com/proxy/0W1ZJpD9Q4x8Lre9qNE1LHGhF_qqYnh6bDZHc837yQ5dz7B8OdhLzsO3oO9QbY_LZMlE7xu1Mbtv8phrFfaSJIbzKLmU3N-y87RssuP8sf3oK_fFlLv57KNqMw7xSkZt")
+  if not all(x in [str(i) for i in range(0, 10)] for x in number): embed.description = "Sorry, your input was invalid"
+  else:
+    count, factor = sympy.proper_divisor_count(int(number)), sympy.proper_divisors(int(number))
+    result = ""
+    for x in factor: result += str(x) + " , "
+    embed.description = f"Number of proper divisors: {count}\n\nDivisors of {number}:\n{result[:-3]}"
+  await ctx.send(embed = embed)
 
 #EASTER EGGS
 @client.command() #Rickroll
