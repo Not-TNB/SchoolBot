@@ -175,6 +175,6 @@ Returns: A picture of the Loss meme (see [here](School%20Helper%20Bot/loss.jpg))
 <br><br>
 
 ## Crying
-### SyntaxL ```s?cry```
+### SyntaxL: ```s?cry```
 
 Returns: A picture of a man crying (see [here](School%20Helper%20Bot/cry.jpg))
