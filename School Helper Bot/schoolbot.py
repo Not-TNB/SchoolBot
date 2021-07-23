@@ -8,7 +8,7 @@ import wikipedia
 import discord
 import sympy
 
-translator = Translator()
+translator = Translator(service_urls=['translate.googleapis.com'])
 client = commands.Bot(command_prefix="s?")
 client.remove_command("help")
 
@@ -131,7 +131,7 @@ async def dice(ctx, sides="6"):
 async def calc(ctx, calculation=""):
   embed = discord.Embed(title = "Calculator", color = 0x62f980)
   embed.set_footer(text="School Bot")
-  embed.set_thumbnail(url="https://lh3.googleusercontent.com/proxy/ntlyANejzMUBF3beig7zRfvf1DqbwARnrtOPY95Qg38fwC8sV_qciw0xbMnwCNv4z8iDsdGkUTl1tPs4rThfL1zZE3TOgjdjFITrjac_n0Qxta6puph-4WtOecMRqxQ9")
+  embed.set_thumbnail(url="https://lh3.googleusercontent.com/proxy/0W1ZJpD9Q4x8Lre9qNE1LHGhF_qqYnh6bDZHc837yQ5dz7B8OdhLzsO3oO9QbY_LZMlE7xu1Mbtv8phrFfaSJIbzKLmU3N-y87RssuP8sf3oK_fFlLv57KNqMw7xSkZt")
   chars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "+", "-", "*", "/", "%", "(", ")"]
   calculation = calculation.replace("^", "**").replace("sqrt", "math.sqrt")
   if all(c in chars for c in calculation):
@@ -187,7 +187,7 @@ async def timetable(ctx, a):
   elif a.lower() == "turner": await ctx.send(file = discord.File(r"School Helper Bot\Turner.png"))
   else: await ctx.send(f"Couldnt find a class called: {a}")
   await ctx.message.add_reaction("👍")
-  
+
 @client.command()
 async def isprime(ctx, number):
   embed = discord.Embed(title = "Calculator", color = 0x62f980)
@@ -199,6 +199,7 @@ async def isprime(ctx, number):
     else: result = "is not prime"
     embed.description = f"{number} {result}"
   await ctx.send(embed = embed)
+  await ctx.message.add_reaction("👍")
 
 @client.command(aliases = ["pf"])
 async def primefactorize(ctx, number):
@@ -212,7 +213,8 @@ async def primefactorize(ctx, number):
     for k, v in factorized.items(): result += str(k) + "^" + str(v) + " , "
     embed.description = f"Prime factorization of {number}:\n{result[:-3]}"
   await ctx.send(embed = embed)
-  
+  await ctx.message.add_reaction("👍")
+
 @client.command()
 async def divisors(ctx, number):
   embed = discord.Embed(title = "Calculator", color = 0x62f980)
@@ -225,8 +227,9 @@ async def divisors(ctx, number):
     for x in factor: result += str(x) + " , "
     embed.description = f"Number of proper divisors: {count}\n\nDivisors of {number}:\n{result[:-3]}"
   await ctx.send(embed = embed)
+  await ctx.message.add_reaction("👍")
 
-#EASTER EGGS
+#M E M E S
 @client.command() #Rickroll
 async def rickroll(ctx): 
   await ctx.send(file = discord.File(r"\School Helper Bot\say_goodbye.jpg"))
@@ -246,6 +249,10 @@ async def hiding_place(ctx):
 @client.command() #Loss Lines
 async def loss(ctx):
   await ctx.send(file = discord.File(r"School Helper Bot\loss.jpg"))
+  await ctx.message.add_reaction("👍")
+@client.command() #Loss Lines
+async def cry(ctx):
+  await ctx.send(file = discord.File(r"School Helper Bot\crying.jpg"))
   await ctx.message.add_reaction("👍")
 
 client.run(config("SCHOOL_BOT_TOKEN"))
