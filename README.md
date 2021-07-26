@@ -138,10 +138,17 @@ Returns: The prime factorization of ```[number]```
 <br><br>
 
 ## Divisors
-### Syntax: ```w?divisors [number]```
+### Syntax: ```s?divisors [number]```
 ```[number]```: An integer
 
 Returns: All the proper divisors of ```[number]```
+<br><br>
+
+## Timer
+### Syntax: ```s?timer [seconds]```
+```[seconds]```: Number of seconds the timer will last
+
+Returns: Starts a timer that ends after ```[seconds]``` seconds
 <br><br>
 
 ## Rickroll
