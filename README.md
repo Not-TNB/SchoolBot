@@ -55,7 +55,7 @@ Returns: Sends the user to [Wikimedia's Donation Page](https://donate.wikimedia.
 ### Syntax: ```s?rps [move]```
 ```[move]```: The player's move. Must be rock, paper or scissors
 
-Returns: The results of a match of Rock Paper Scissors with the player against WikiSearch
+Returns: The results of a match of Rock Paper Scissors with the player against School Bot
 <br><br>
 
 ## Dice
